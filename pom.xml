@@ -99,7 +99,7 @@
 			<plugin>
 				<groupId>org.owasp</groupId>
 				<artifactId>dependency-check-maven</artifactId>
-				<version>6.3.1</version>
+				<version>8.3.1</version>
 				<configuration>
 					<failBuildOnCVSS>7</failBuildOnCVSS>
 					<suppressionFiles>
@@ -120,7 +120,7 @@
 			<plugins>
 				<plugin>
 					<artifactId>maven-compiler-plugin</artifactId>
-					<version>3.8.1</version>
+					<version>3.11.0</version>
 					<configuration>
 						<source>1.8</source>
 						<target>1.8</target>
@@ -129,7 +129,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-release-plugin</artifactId>
-					<version>2.5.3</version>
+					<version>3.0.1</version>
 					<configuration>
 						<autoVersionSubmodules>true</autoVersionSubmodules>
 						<useReleaseProfile>false</useReleaseProfile>
@@ -187,7 +187,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-source-plugin</artifactId>
-						<version>3.2.1</version>
+						<version>3.3.0</version>
 						<executions>
 							<execution>
 								<id>attach-sources</id>
@@ -216,7 +216,7 @@
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
-						<version>3.0.1</version>
+						<version>3.1.0</version>
 						<executions>
 							<execution>
 								<id>sign-artifacts</id>
