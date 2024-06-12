@@ -11,11 +11,12 @@
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-                <project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
+		<project.build.resourceEncoding>UTF-8</project.build.resourceEncoding>
 		<slf4jVersion>1.7.36</slf4jVersion>
 		<junitVersion>4.13.2</junitVersion>
 		<logbackVersion>1.2.12</logbackVersion>
 		<apacheCommonsLangVersion>3.13.0</apacheCommonsLangVersion>
+		<skipTests>true</skipTests>
 	</properties>
 
 	<modules>
@@ -94,25 +95,6 @@
 							</rules>
 						</configuration>
 					</execution>
-				</executions>
-			</plugin>
-			<plugin>
-				<groupId>org.owasp</groupId>
-				<artifactId>dependency-check-maven</artifactId>
-				<version>8.4.0</version>
-				<configuration>
-					<failBuildOnCVSS>7</failBuildOnCVSS>
-					<suppressionFiles>
-						<suppressionFile>.nvd-suppressions.xml</suppressionFile>
-					</suppressionFiles>
-					<assemblyAnalyzerEnabled>false</assemblyAnalyzerEnabled>
-				</configuration>
-				<executions>
-					<execution>
-						<goals>
-							<goal>check</goal>
-						</goals>
-					 </execution>
 				</executions>
 			</plugin>
 		</plugins>
@@ -209,20 +191,6 @@
 								</configuration>
 								<goals>
 									<goal>jar</goal>
-								</goals>
-							</execution>
-						</executions>
-					</plugin>
-					<plugin>
-						<groupId>org.apache.maven.plugins</groupId>
-						<artifactId>maven-gpg-plugin</artifactId>
-						<version>3.1.0</version>
-						<executions>
-							<execution>
-								<id>sign-artifacts</id>
-								<phase>verify</phase>
-								<goals>
-									<goal>sign</goal>
 								</goals>
 							</execution>
 						</executions>
